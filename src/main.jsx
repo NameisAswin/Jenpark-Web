@@ -2,20 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider, CssBaseline } from '@mui/material';
 import App from './App.jsx';
 import { store } from './store';
-import theme from './theme';
+import { AppThemeProvider } from './theme/ThemeContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+      <AppThemeProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </ThemeProvider>
+      </AppThemeProvider>
     </Provider>
   </React.StrictMode>
 );
