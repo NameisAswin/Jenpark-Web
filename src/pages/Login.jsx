@@ -515,9 +515,9 @@ export default function LoginPage() {
                               </Box>
                             </Field>
 
-
-
-                            <SubmitBtn loading={loading} label="Sign In" isDark={isDark} />
+                            <Box sx={{ mt: 1.5 }}>
+                              <SubmitBtn loading={loading} label="Sign In" isDark={isDark} />
+                            </Box>
                           </Stack>
                         </Box>
                       </motion.div>
