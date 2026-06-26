@@ -6,8 +6,6 @@ import {
   Typography,
   Stack,
   IconButton,
-  Checkbox,
-  FormControlLabel,
   Tooltip,
 } from '@mui/material';
 import {
@@ -166,7 +164,6 @@ export default function LoginPage() {
   const [loginEmail,    setLoginEmail]    = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [showLoginPwd,  setShowLoginPwd]  = useState(false);
-  const [rememberMe,    setRememberMe]    = useState(false);
   const [loginError,    setLoginError]    = useState('');
 
   // Register state
@@ -518,21 +515,7 @@ export default function LoginPage() {
                               </Box>
                             </Field>
 
-                            <FormControlLabel
-                              control={
-                                <Checkbox
-                                  checked={rememberMe}
-                                  onChange={(e) => setRememberMe(e.target.checked)}
-                                  sx={{ color: isDark ? DARK.border : 'rgba(0,0,0,0.2)', '&.Mui-checked': { color: isDark ? DARK.red : '#111827' } }}
-                                />
-                              }
-                              label={
-                                <Typography variant="body1" sx={{ color: isDark ? DARK.text1 : '#4b5563', fontWeight: 500, userSelect: 'none' }}>
-                                  Keep me signed in
-                                </Typography>
-                              }
-                              sx={{ ml: -0.5 }}
-                            />
+
 
                             <SubmitBtn loading={loading} label="Sign In" isDark={isDark} />
                           </Stack>
