@@ -573,7 +573,7 @@ export default function LoginPage() {
                                   component="input"
                                   id="reg-password"
                                   type={showRegPwd ? 'text' : 'password'}
-                                  placeholder="Min. 6 characters"
+                                  placeholder="Min. 8 characters"
                                   value={regPassword}
                                   onChange={(e) => setRegPassword(e.target.value)}
                                   autoComplete="new-password"
