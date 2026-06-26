@@ -515,7 +515,7 @@ export default function LoginPage() {
                               </Box>
                             </Field>
 
-                            <Box sx={{ mt: 1.5 }}>
+                            <Box sx={{ mt: 4 }}>
                               <SubmitBtn loading={loading} label="Sign In" isDark={isDark} />
                             </Box>
                           </Stack>
